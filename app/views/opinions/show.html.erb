@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @opinion.comment %>
+</p>
+
+<div>
+	<%= image_tag @opinion.image.url(:thumb) %>
+</div>
+
+<div>
+	<%= image_tag @opinion.image.url(:medium) %>
+</div>
+
+<div>
+	<%= image_tag @opinion.image.url %>
+</div>
+
+<%= link_to 'Edit', edit_opinion_path(@opinion) %> |
+<%= link_to 'Back', opinions_path %>

@@ -1,0 +1,25 @@
+<%= form_for @opinion, :url => opinions_path, :html => { :multipart => true } do |form| %>
+  
+  <% if @opinion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@opinion.errors.count, "error") %> prohibited this opinion from being saved:</h2>
+
+      <ul>
+      <% @opinion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :comment %><br>
+    <%= form.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= form.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

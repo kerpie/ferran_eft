@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  root "opinions#index"
+  root "session#start"
+
+  get 'session/start'
+  post 'session/create' => "session#create", as: :create_session
+  get 'session/close' => "session#destroy", as: :destroy_session
 
   resources :opinions
   # The priority is based upon order of creation: first created -> highest priority.

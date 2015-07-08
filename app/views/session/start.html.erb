@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="page-header">Identificate para ingresar</h1>
+  </div>
+</div>
+
+<div class="row">
+	<div class="col-md-4 col-md-offset-4">
+		<%= form_tag create_session_path do %>	
+			<div class="form-group">
+				<%= text_field_tag "code", "", class: "form-control", placeholder: "Ingresa el código" %>
+			</div>
+			<div class="form-group">
+				<%= submit_tag "Ingresar", class: "btn btn-primary btn-block" %>
+			</div>
+		<% end %>
+	</div>
+</div>

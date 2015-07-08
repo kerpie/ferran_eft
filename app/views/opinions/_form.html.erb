@@ -12,14 +12,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :comment %><br>
-    <%= form.text_field :comment %>
+  <div class="form-group">
+    <%= form.label :comment, "Comentario" %>
+    <%= form.text_field :comment, class: "form-control", placeholder: "Comentario" %>
   </div>
-  <div class="field">
+  <div class="form-group">
+    <%=  form.label :image, "Imagen" %>
     <%= form.file_field :image %>
+    <p class="help-block">La imagen a guardar debe estar en formato .jpg</p>
   </div>
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

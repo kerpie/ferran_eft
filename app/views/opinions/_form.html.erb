@@ -22,6 +22,11 @@
     <p class="help-block">La imagen a guardar debe estar en formato .jpg</p>
   </div>
   <div class="form-group">
+    <%=  form.label :grayscale_image, "Imagen" %>
+    <%= form.file_field :grayscale_image %>
+    <p class="help-block">La imagen a guardar debe estar en formato .jpg</p>
+  </div>
+  <div class="form-group">
     <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

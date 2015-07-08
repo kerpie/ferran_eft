@@ -7,7 +7,7 @@ class SessionController < ApplicationController
 
   def create
   	code = params[:code]
-  	if(code == ENV["pass"].to_s)
+  	if(code == "4dr14157h3b357")
   		session[:user_accepted] = true
   	end
     redirect_to root_path

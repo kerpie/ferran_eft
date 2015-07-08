@@ -32,8 +32,6 @@
 	      	<% if session[:user_accepted] %>
 		        <li><p class="navbar-text">Sesión iniciada</p></li>
 		        <li><%= link_to "Cerrar sesión", destroy_session_path %></li>
-		    <% else %>
-		    	<li><%= link_to "Iniciar sesión", create_session_path %></li>
 		    <% end %>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->

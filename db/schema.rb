@@ -11,16 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150704155603) do
+ActiveRecord::Schema.define(version: 20150708214434) do
 
   create_table "opinions", force: :cascade do |t|
     t.string   "comment"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "grayscale_image_file_name"
+    t.string   "grayscale_image_content_type"
+    t.integer  "grayscale_image_file_size"
+    t.datetime "grayscale_image_updated_at"
   end
 
 end

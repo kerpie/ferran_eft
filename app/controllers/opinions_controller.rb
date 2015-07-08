@@ -1,6 +1,6 @@
 class OpinionsController < ApplicationController
   before_action :set_opinion, only: [:show, :edit, :update, :destroy]
-  before_action :check_user, only: [:index, :show, :new, :edit, :update, :destroy]
+  before_action :check_user, only: [:index, :show, :new, :edit, :destroy]
 
   # GET /opinions
   # GET /opinions.json
@@ -70,7 +70,7 @@ class OpinionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def opinion_params
-      params.require(:opinion).permit(:comment, :image, :grayscale_image)
+      params.require(:opinion).permit(:comment, :image)
     end
 
     def check_user

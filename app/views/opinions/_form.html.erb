@@ -13,6 +13,14 @@
   <% end %>
 
   <div class="form-group">
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Comentario" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email, "Correo" %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Comentario" %>
+  </div>
+  <div class="form-group">
     <%= form.label :comment, "Comentario" %>
     <%= form.text_field :comment, class: "form-control", placeholder: "Comentario" %>
   </div>

@@ -16,6 +16,30 @@
 	<div class="col-md-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
+				<h3 class="panel-title">Nombre: </h3>
+			</div>
+			<div class="panel-body">
+				<p>
+					<%= @opinion.name unless @opinion.name.nil? %>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Correo: </h3>
+			</div>
+			<div class="panel-body">
+				<p>
+					<%= @opinion.email unless @opinion.email.nil? %>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
 				<h3 class="panel-title">comentario: </h3>
 			</div>
 			<div class="panel-body">

@@ -17,7 +17,7 @@
     <% @opinions.each do |opinion| %>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <%= image_tag opinion.image.url(:medium), class: "" %>
+          <%= image_tag opinion.image.url, class: "" %>
           <div class="caption">
             <h3>Comentario</h3>
             <p>

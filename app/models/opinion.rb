@@ -1,10 +1,10 @@
 class Opinion < ActiveRecord::Base
 
-	has_attached_file 	:image, 
+	has_attached_file 	:image,
+				:processors => [:grayscale], 
 						:path => ":rails_root/public/system/:attachment/:id/:style/:filename",
   						:url => "/system/:attachment/:id/:style/:filename",
 						:styles => { 
-							:medium => "300x300>", 
 							:grayscale => { 
 								processors: [:grayscale]
 							}
